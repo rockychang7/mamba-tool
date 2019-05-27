@@ -9,35 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mamba-tool-core</artifactId>
+    <artifactId>mamba-tool-db</artifactId>
 
     <properties>
-        <junit.version>4.12</junit.version>
-        <slf4j.version>1.7.25</slf4j.version>
-        <guava.vesion>27.0.1-jre</guava.vesion>
+        <mysql.version>5.1.47</mysql.version>
     </properties>
-
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.vesion}</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
