@@ -24,11 +24,4 @@ public final class CollectionUtil {
     public static <T> boolean nonEmpty(Collection<T> collection) {
         return collection != null && collection.size() > 0;
     }
-
-    public static void main(String[] args) {
-        Map<String, String> map = Maps.newHashMap();
-        List<String> list = Lists.newArrayList();
-        System.out.println(nonEmpty(list));
-    }
-
 }
