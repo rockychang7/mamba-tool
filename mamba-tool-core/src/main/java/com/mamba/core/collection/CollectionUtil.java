@@ -1,11 +1,6 @@
 package com.mamba.core.collection;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-
 import java.util.Collection;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @version 1.0

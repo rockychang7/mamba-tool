@@ -22,9 +22,9 @@ public final class DateUtil {
 
     //=============java 8=================
 
-    public static String getFormatDateTime(LocalDateTime var1, String pattern) {
+    public static String getFormatDateTime(LocalDateTime localDateTime, String pattern) {
         DateTimeFormatter var2 = DateTimeFormatter.ofPattern(pattern);
-        return var1.format(var2);
+        return localDateTime.format(var2);
     }
 
     public static LocalDateTime getCurrentLocalDateTime() {
@@ -33,12 +33,12 @@ public final class DateUtil {
 
     //============ before java 8==========
     public static Date getCurrentDate() {
-        return new Date(System.currentTimeMillis());
+        return new Date();
     }
 
-    public static String getFormatDate(Date var3, String pattern) {
-        DateFormat var4 = new SimpleDateFormat(pattern);
-        return var4.format(var3);
+    public static String getFormatDate(Date date, String pattern) {
+        DateFormat var3 = new SimpleDateFormat(pattern);
+        return var3.format(date);
     }
 
 }
