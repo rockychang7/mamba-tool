@@ -5,13 +5,13 @@ import java.util.Objects;
 /**
  * @Author JoeBig7
  * @date 2021/11/2 19:46:38
- * @description String tool
+ * @description 字符串工具类
  */
 public class StringUtils {
-
-
     /**
-     * @param str
+     * 判断字符串对象是否为空或者长度是否为0，满足一项返回true
+     *
+     * @param str 目标字符串
      * @return
      */
     public static boolean isEmpty(String str) {
@@ -19,11 +19,5 @@ public class StringUtils {
             return true;
         }
         return false;
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println(isEmpty("xx"));
-        System.out.println(isEmpty(""));
     }
 }
