@@ -20,4 +20,27 @@ public class StringUtils {
         }
         return false;
     }
+
+
+    /**
+     * 判断字符串是否已指定子字符串结尾
+     *
+     * @param str
+     * @param suffixStr
+     * @return
+     */
+    public static boolean isSuffix(String str, String suffixStr) {
+        if (isEmpty(str) || isEmpty(suffixStr)) {
+            return false;
+        }
+
+        int suffixStrLen = suffixStr.length();
+        int strLen = str.length();
+
+        if (strLen < suffixStrLen) {
+            return false;
+        } else {
+            return str.substring(strLen - suffixStrLen).equalsIgnoreCase(suffixStr);
+        }
+    }
 }
