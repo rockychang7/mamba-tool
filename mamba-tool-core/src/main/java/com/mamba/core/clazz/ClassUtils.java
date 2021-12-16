@@ -28,4 +28,25 @@ public class ClassUtils {
         }
 
     }
+
+
+    /**
+     * 根据Class获取属性值
+     *
+     * @param obj
+     * @param fieldName
+     * @return
+     */
+    public static Object getField(Object obj, String fieldName) {
+        try {
+            Field field = obj.getClass().getDeclaredField(fieldName);
+            field.setAccessible(true);
+            return field.get(obj);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -1,6 +1,7 @@
 package com.mamba.core.collection;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -18,5 +19,23 @@ public class CollectionsUtils {
      */
     public static boolean isEmpty(Collection collection) {
         return Objects.isNull(collection) || collection.isEmpty();
+    }
+
+    /**
+     * 将List<String>转换成String[]
+     *
+     * @param list
+     * @return
+     */
+    public static String[] toStringArray(List<String> list) {
+        if (isEmpty(list)) {
+            return new String[]{};
+        }
+
+        String[] strArray = new String[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            strArray[i] = list.get(i);
+        }
+        return strArray;
     }
 }
