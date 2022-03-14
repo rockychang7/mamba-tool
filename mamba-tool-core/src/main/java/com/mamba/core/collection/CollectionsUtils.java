@@ -1,8 +1,9 @@
 package com.mamba.core.collection;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Objects;
+import com.google.common.collect.Lists;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Author JoeBig7
@@ -37,5 +38,26 @@ public class CollectionsUtils {
             strArray[i] = list.get(i);
         }
         return strArray;
+    }
+
+
+    public static boolean isSame(Collection var1, Collection var2) {
+        if (isEmpty(var1) || isEmpty(var2)) {
+            return false;
+        }
+
+        if (var1.size() != var2.size()) {
+            return false;
+        }
+
+        Iterator iterator = var1.iterator();
+
+        while (iterator.hasNext()){
+            Object ele = iterator.next();
+            if(!var2.contains(ele)){
+               return false;
+            }
+        }
+        return true;
     }
 }
